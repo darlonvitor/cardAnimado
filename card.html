@@ -5,7 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card animado</title>
 </head>
+<style>
+    *{
+        /*removando margen e padding pradrao*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;/*Adiciona o padding e o border ao total do width e height, isto eh, aplica padding e border sem aumentar tamanho do container*/
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card{
+        padding: 20px;
+        width: 350px;
+        box-shadow: 0 0 5px 0px #e2e2e2;
+        position: relative;
+    }
+
+    .card:after,
+    .card:before{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        top:0;
+        left: 0;
+        right: 0;
+
+    }
+
+    .card:before{
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .card:after{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .text{
+        margin: 20px auto;
+    }
+</style>
 <body>
-    
+    <div class="card">
+        <h1>Hey !</h1>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse augue mauris, feugiat id eros eu, vehicula egestas massa. Sed sollicitudin turpis lacus, sit amet aliquet ante bibendum quis. 
+        </p>
+    </div>
 </body>
 </html>
